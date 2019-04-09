@@ -1,4 +1,8 @@
-﻿Public Class Customer
+'Customer.vb
+'Caleb Stone
+'04/08/2019
+
+Public Class Customer
 
     Public CustID As Integer
     Public FirstName As String
