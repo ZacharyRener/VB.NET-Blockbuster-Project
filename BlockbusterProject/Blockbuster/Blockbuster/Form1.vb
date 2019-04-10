@@ -18,16 +18,7 @@
         'TODO: This line of code loads data into the 'BlockbustersDataSet.Invoice' table. You can move, or remove it, as needed.
         Me.InvoiceTableAdapter.Fill(Me.BlockbustersDataSet.Invoice)
 
-        chkList_Movies.Items.Add("Attack of the Killer Tomatoes")
-        chkList_Movies.Items.Add("Elvira: Mistress of the Dark")
-        chkList_Movies.Items.Add("Hunger Games")
-        chkList_Movies.Items.Add("Iron Giant")
-        chkList_Movies.Items.Add("Pulp Fiction")
-        chkList_Movies.Items.Add("Reservoir Dogs")
-        chkList_Movies.Items.Add("Resident Evil")
-        chkList_Movies.Items.Add("Revenge of the Nerds")
-        chkList_Movies.Items.Add("Star Wars")
-        chkList_Movies.Items.Add("Titan A.E.")
+
 
         CBDuration.Items.Add("2 Days")
         CBDuration.Items.Add("1 Week")
@@ -41,4 +32,5 @@
     Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
         Me.Close()
     End Sub
+
 End Class
