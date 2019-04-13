@@ -1,9 +1,13 @@
 ﻿Public Class Form1
+    Public Tax As Double
+    Public Total As Double
+    Public RentalFee As Double
+
+
     Private Sub InvoiceBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.InvoiceBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.BlockbustersDataSet)
-
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -25,12 +29,17 @@
         CBDuration.Items.Add("2 Weeks")
     End Sub
 
-
-
-
-
     Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
         Me.Close()
     End Sub
 
+
+
+    Private Sub BtnCalculate_Click(sender As Object, e As EventArgs) Handles BtnCalculate.Click
+
+    End Sub
+
+    Private Sub ADD_Remove_Click(sender As Object, e As EventArgs) Handles ADD_Remove.Click
+        Update_Movie_Inventory.Show()
+    End Sub
 End Class

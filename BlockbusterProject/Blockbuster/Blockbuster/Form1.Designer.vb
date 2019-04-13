@@ -24,13 +24,14 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.chkList_Movies = New System.Windows.Forms.ListBox()
+        Me.MoviesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BlockbustersDataSet = New Blockbuster.BlockbustersDataSet()
         Me.lblDate = New System.Windows.Forms.Label()
         Me.lblDuration = New System.Windows.Forms.Label()
         Me.CBDuration = New System.Windows.Forms.ComboBox()
         Me.dtpCalender = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.BlockbustersDataSet = New Blockbuster.BlockbustersDataSet()
         Me.InvoiceBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.InvoiceTableAdapter = New Blockbuster.BlockbustersDataSetTableAdapters.InvoiceTableAdapter()
         Me.TableAdapterManager = New Blockbuster.BlockbustersDataSetTableAdapters.TableAdapterManager()
@@ -40,7 +41,6 @@ Partial Class Form1
         Me.RentalsTableAdapter = New Blockbuster.BlockbustersDataSetTableAdapters.RentalsTableAdapter()
         Me.MembershipsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Movie_InventoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MoviesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RentalsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.lblTotalDue1 = New System.Windows.Forms.Label()
         Me.lblTax1 = New System.Windows.Forms.Label()
@@ -55,17 +55,20 @@ Partial Class Form1
         Me.btnSearchCustomer = New System.Windows.Forms.Button()
         Me.btnCompleteRental = New System.Windows.Forms.Button()
         Me.BtnNewCust = New System.Windows.Forms.Button()
+        Me.ADD_Remove = New System.Windows.Forms.Button()
+        Me.MoviesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        CType(Me.MoviesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BlockbustersDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InvoiceBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembershipsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Movie_InventoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MoviesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RentalsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MoviesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'chkList_Movies
         '
-        Me.chkList_Movies.DataSource = Me.MoviesBindingSource
+        Me.chkList_Movies.DataSource = Me.MoviesBindingSource1
         Me.chkList_Movies.DisplayMember = "Title"
         Me.chkList_Movies.FormattingEnabled = True
         Me.chkList_Movies.ItemHeight = 16
@@ -74,10 +77,20 @@ Partial Class Form1
         Me.chkList_Movies.Size = New System.Drawing.Size(203, 180)
         Me.chkList_Movies.TabIndex = 0
         '
+        'MoviesBindingSource
+        '
+        Me.MoviesBindingSource.DataMember = "Movies"
+        Me.MoviesBindingSource.DataSource = Me.BlockbustersDataSet
+        '
+        'BlockbustersDataSet
+        '
+        Me.BlockbustersDataSet.DataSetName = "BlockbustersDataSet"
+        Me.BlockbustersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'lblDate
         '
         Me.lblDate.AutoSize = True
-        Me.lblDate.Location = New System.Drawing.Point(612, 87)
+        Me.lblDate.Location = New System.Drawing.Point(497, 86)
         Me.lblDate.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDate.Name = "lblDate"
         Me.lblDate.Size = New System.Drawing.Size(42, 17)
@@ -87,7 +100,7 @@ Partial Class Form1
         'lblDuration
         '
         Me.lblDuration.AutoSize = True
-        Me.lblDuration.Location = New System.Drawing.Point(404, 87)
+        Me.lblDuration.Location = New System.Drawing.Point(289, 86)
         Me.lblDuration.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDuration.Name = "lblDuration"
         Me.lblDuration.Size = New System.Drawing.Size(66, 17)
@@ -98,7 +111,7 @@ Partial Class Form1
         '
         Me.CBDuration.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CBDuration.FormattingEnabled = True
-        Me.CBDuration.Location = New System.Drawing.Point(404, 109)
+        Me.CBDuration.Location = New System.Drawing.Point(289, 108)
         Me.CBDuration.Margin = New System.Windows.Forms.Padding(4)
         Me.CBDuration.Name = "CBDuration"
         Me.CBDuration.Size = New System.Drawing.Size(140, 24)
@@ -106,7 +119,7 @@ Partial Class Form1
         '
         'dtpCalender
         '
-        Me.dtpCalender.Location = New System.Drawing.Point(615, 110)
+        Me.dtpCalender.Location = New System.Drawing.Point(500, 109)
         Me.dtpCalender.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpCalender.Name = "dtpCalender"
         Me.dtpCalender.Size = New System.Drawing.Size(259, 22)
@@ -132,11 +145,6 @@ Partial Class Form1
         Me.Label2.Size = New System.Drawing.Size(382, 43)
         Me.Label2.TabIndex = 87
         Me.Label2.Text = "Blockbuster Movies"
-        '
-        'BlockbustersDataSet
-        '
-        Me.BlockbustersDataSet.DataSetName = "BlockbustersDataSet"
-        Me.BlockbustersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'InvoiceBindingSource
         '
@@ -183,11 +191,6 @@ Partial Class Form1
         Me.Movie_InventoryBindingSource.DataMember = "Movie Inventory"
         Me.Movie_InventoryBindingSource.DataSource = Me.BlockbustersDataSet
         '
-        'MoviesBindingSource
-        '
-        Me.MoviesBindingSource.DataMember = "Movies"
-        Me.MoviesBindingSource.DataSource = Me.BlockbustersDataSet
-        '
         'RentalsBindingSource
         '
         Me.RentalsBindingSource.DataMember = "Rentals"
@@ -195,7 +198,7 @@ Partial Class Form1
         '
         'lblTotalDue1
         '
-        Me.lblTotalDue1.Location = New System.Drawing.Point(737, 262)
+        Me.lblTotalDue1.Location = New System.Drawing.Point(622, 261)
         Me.lblTotalDue1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTotalDue1.Name = "lblTotalDue1"
         Me.lblTotalDue1.Size = New System.Drawing.Size(88, 15)
@@ -203,7 +206,7 @@ Partial Class Form1
         '
         'lblTax1
         '
-        Me.lblTax1.Location = New System.Drawing.Point(737, 222)
+        Me.lblTax1.Location = New System.Drawing.Point(622, 221)
         Me.lblTax1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTax1.Name = "lblTax1"
         Me.lblTax1.Size = New System.Drawing.Size(88, 15)
@@ -211,7 +214,7 @@ Partial Class Form1
         '
         'lblTotalRentalFee1
         '
-        Me.lblTotalRentalFee1.Location = New System.Drawing.Point(737, 177)
+        Me.lblTotalRentalFee1.Location = New System.Drawing.Point(622, 176)
         Me.lblTotalRentalFee1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTotalRentalFee1.Name = "lblTotalRentalFee1"
         Me.lblTotalRentalFee1.Size = New System.Drawing.Size(88, 15)
@@ -220,7 +223,7 @@ Partial Class Form1
         'lblSubTotalDue
         '
         Me.lblSubTotalDue.AutoSize = True
-        Me.lblSubTotalDue.Location = New System.Drawing.Point(625, 260)
+        Me.lblSubTotalDue.Location = New System.Drawing.Point(510, 259)
         Me.lblSubTotalDue.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSubTotalDue.Name = "lblSubTotalDue"
         Me.lblSubTotalDue.Size = New System.Drawing.Size(74, 17)
@@ -230,7 +233,7 @@ Partial Class Form1
         'lblTax
         '
         Me.lblTax.AutoSize = True
-        Me.lblTax.Location = New System.Drawing.Point(625, 223)
+        Me.lblTax.Location = New System.Drawing.Point(510, 222)
         Me.lblTax.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTax.Name = "lblTax"
         Me.lblTax.Size = New System.Drawing.Size(35, 17)
@@ -240,7 +243,7 @@ Partial Class Form1
         'lblTotalRentalFee
         '
         Me.lblTotalRentalFee.AutoSize = True
-        Me.lblTotalRentalFee.Location = New System.Drawing.Point(625, 177)
+        Me.lblTotalRentalFee.Location = New System.Drawing.Point(510, 176)
         Me.lblTotalRentalFee.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTotalRentalFee.Name = "lblTotalRentalFee"
         Me.lblTotalRentalFee.Size = New System.Drawing.Size(117, 17)
@@ -249,7 +252,7 @@ Partial Class Form1
         '
         'lblDueBack1
         '
-        Me.lblDueBack1.Location = New System.Drawing.Point(737, 300)
+        Me.lblDueBack1.Location = New System.Drawing.Point(622, 299)
         Me.lblDueBack1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDueBack1.Name = "lblDueBack1"
         Me.lblDueBack1.Size = New System.Drawing.Size(88, 15)
@@ -258,7 +261,7 @@ Partial Class Form1
         'lblDueBack
         '
         Me.lblDueBack.AutoSize = True
-        Me.lblDueBack.Location = New System.Drawing.Point(625, 298)
+        Me.lblDueBack.Location = New System.Drawing.Point(510, 297)
         Me.lblDueBack.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDueBack.Name = "lblDueBack"
         Me.lblDueBack.Size = New System.Drawing.Size(73, 17)
@@ -267,7 +270,7 @@ Partial Class Form1
         '
         'BtnExit
         '
-        Me.BtnExit.Location = New System.Drawing.Point(492, 387)
+        Me.BtnExit.Location = New System.Drawing.Point(377, 386)
         Me.BtnExit.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnExit.Name = "BtnExit"
         Me.BtnExit.Size = New System.Drawing.Size(88, 26)
@@ -277,7 +280,7 @@ Partial Class Form1
         '
         'BtnCalculate
         '
-        Me.BtnCalculate.Location = New System.Drawing.Point(358, 387)
+        Me.BtnCalculate.Location = New System.Drawing.Point(243, 386)
         Me.BtnCalculate.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnCalculate.Name = "BtnCalculate"
         Me.BtnCalculate.Size = New System.Drawing.Size(88, 26)
@@ -287,7 +290,7 @@ Partial Class Form1
         '
         'btnSearchCustomer
         '
-        Me.btnSearchCustomer.Location = New System.Drawing.Point(645, 388)
+        Me.btnSearchCustomer.Location = New System.Drawing.Point(530, 387)
         Me.btnSearchCustomer.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSearchCustomer.Name = "btnSearchCustomer"
         Me.btnSearchCustomer.Size = New System.Drawing.Size(105, 26)
@@ -297,7 +300,7 @@ Partial Class Form1
         '
         'btnCompleteRental
         '
-        Me.btnCompleteRental.Location = New System.Drawing.Point(740, 337)
+        Me.btnCompleteRental.Location = New System.Drawing.Point(625, 336)
         Me.btnCompleteRental.Name = "btnCompleteRental"
         Me.btnCompleteRental.Size = New System.Drawing.Size(111, 37)
         Me.btnCompleteRental.TabIndex = 102
@@ -306,7 +309,7 @@ Partial Class Form1
         '
         'BtnNewCust
         '
-        Me.BtnNewCust.Location = New System.Drawing.Point(759, 388)
+        Me.BtnNewCust.Location = New System.Drawing.Point(644, 387)
         Me.BtnNewCust.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnNewCust.Name = "BtnNewCust"
         Me.BtnNewCust.Size = New System.Drawing.Size(105, 26)
@@ -314,11 +317,26 @@ Partial Class Form1
         Me.BtnNewCust.Text = "New Customer"
         Me.BtnNewCust.UseVisualStyleBackColor = True
         '
+        'ADD_Remove
+        '
+        Me.ADD_Remove.Location = New System.Drawing.Point(13, 387)
+        Me.ADD_Remove.Name = "ADD_Remove"
+        Me.ADD_Remove.Size = New System.Drawing.Size(126, 26)
+        Me.ADD_Remove.TabIndex = 104
+        Me.ADD_Remove.Text = "Add/Remove"
+        Me.ADD_Remove.UseVisualStyleBackColor = True
+        '
+        'MoviesBindingSource1
+        '
+        Me.MoviesBindingSource1.DataMember = "Movies"
+        Me.MoviesBindingSource1.DataSource = Me.BlockbustersDataSet
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(950, 560)
+        Me.Controls.Add(Me.ADD_Remove)
         Me.Controls.Add(Me.btnSearchCustomer)
         Me.Controls.Add(Me.btnCompleteRental)
         Me.Controls.Add(Me.BtnNewCust)
@@ -341,12 +359,13 @@ Partial Class Form1
         Me.Controls.Add(Me.chkList_Movies)
         Me.Name = "Form1"
         Me.Text = "Form1"
+        CType(Me.MoviesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BlockbustersDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InvoiceBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembershipsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Movie_InventoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MoviesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RentalsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MoviesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -384,4 +403,6 @@ Partial Class Form1
     Friend WithEvents btnSearchCustomer As Button
     Friend WithEvents btnCompleteRental As Button
     Friend WithEvents BtnNewCust As Button
+    Friend WithEvents ADD_Remove As Button
+    Friend WithEvents MoviesBindingSource1 As BindingSource
 End Class
