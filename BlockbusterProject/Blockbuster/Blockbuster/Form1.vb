@@ -29,17 +29,11 @@
         CBDuration.Items.Add("2 Weeks")
     End Sub
 
-    Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
-        Me.Close()
-    End Sub
-
-
-
-    Private Sub BtnCalculate_Click(sender As Object, e As EventArgs) Handles BtnCalculate.Click
-
-    End Sub
-
     Private Sub ADD_Remove_Click(sender As Object, e As EventArgs) Handles ADD_Remove.Click
         Update_Movie_Inventory.Show()
+    End Sub
+
+    Private Sub BTNExit_Click(sender As Object, e As EventArgs) Handles BTNExit.Click
+        Me.Close()
     End Sub
 End Class

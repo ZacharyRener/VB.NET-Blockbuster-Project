@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.chkList_Movies = New System.Windows.Forms.ListBox()
@@ -50,25 +50,24 @@ Partial Class Form1
         Me.lblTotalRentalFee = New System.Windows.Forms.Label()
         Me.lblDueBack1 = New System.Windows.Forms.Label()
         Me.lblDueBack = New System.Windows.Forms.Label()
-        Me.BtnExit = New System.Windows.Forms.Button()
         Me.BtnCalculate = New System.Windows.Forms.Button()
         Me.btnSearchCustomer = New System.Windows.Forms.Button()
         Me.btnCompleteRental = New System.Windows.Forms.Button()
         Me.BtnNewCust = New System.Windows.Forms.Button()
         Me.ADD_Remove = New System.Windows.Forms.Button()
-        Me.MoviesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BTNExit = New System.Windows.Forms.Button()
         CType(Me.MoviesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BlockbustersDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InvoiceBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembershipsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Movie_InventoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RentalsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MoviesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'chkList_Movies
         '
-        Me.chkList_Movies.DataSource = Me.MoviesBindingSource1
+        Me.chkList_Movies.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MoviesBindingSource, "Title", True))
+        Me.chkList_Movies.DataSource = Me.MoviesBindingSource
         Me.chkList_Movies.DisplayMember = "Title"
         Me.chkList_Movies.FormattingEnabled = True
         Me.chkList_Movies.ItemHeight = 16
@@ -268,16 +267,6 @@ Partial Class Form1
         Me.lblDueBack.TabIndex = 96
         Me.lblDueBack.Text = "Due Back:"
         '
-        'BtnExit
-        '
-        Me.BtnExit.Location = New System.Drawing.Point(377, 386)
-        Me.BtnExit.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnExit.Name = "BtnExit"
-        Me.BtnExit.Size = New System.Drawing.Size(88, 26)
-        Me.BtnExit.TabIndex = 99
-        Me.BtnExit.Text = "Exit"
-        Me.BtnExit.UseVisualStyleBackColor = True
-        '
         'BtnCalculate
         '
         Me.BtnCalculate.Location = New System.Drawing.Point(243, 386)
@@ -326,21 +315,25 @@ Partial Class Form1
         Me.ADD_Remove.Text = "Add/Remove"
         Me.ADD_Remove.UseVisualStyleBackColor = True
         '
-        'MoviesBindingSource1
+        'BTNExit
         '
-        Me.MoviesBindingSource1.DataMember = "Movies"
-        Me.MoviesBindingSource1.DataSource = Me.BlockbustersDataSet
+        Me.BTNExit.Location = New System.Drawing.Point(359, 388)
+        Me.BTNExit.Name = "BTNExit"
+        Me.BTNExit.Size = New System.Drawing.Size(75, 23)
+        Me.BTNExit.TabIndex = 105
+        Me.BTNExit.Text = "Exit"
+        Me.BTNExit.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(950, 560)
+        Me.Controls.Add(Me.BTNExit)
         Me.Controls.Add(Me.ADD_Remove)
         Me.Controls.Add(Me.btnSearchCustomer)
         Me.Controls.Add(Me.btnCompleteRental)
         Me.Controls.Add(Me.BtnNewCust)
-        Me.Controls.Add(Me.BtnExit)
         Me.Controls.Add(Me.BtnCalculate)
         Me.Controls.Add(Me.lblDueBack1)
         Me.Controls.Add(Me.lblDueBack)
@@ -365,7 +358,6 @@ Partial Class Form1
         CType(Me.MembershipsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Movie_InventoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RentalsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MoviesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -398,11 +390,10 @@ Partial Class Form1
     Friend WithEvents lblTotalRentalFee As Label
     Friend WithEvents lblDueBack1 As Label
     Friend WithEvents lblDueBack As Label
-    Friend WithEvents BtnExit As Button
     Friend WithEvents BtnCalculate As Button
     Friend WithEvents btnSearchCustomer As Button
     Friend WithEvents btnCompleteRental As Button
     Friend WithEvents BtnNewCust As Button
     Friend WithEvents ADD_Remove As Button
-    Friend WithEvents MoviesBindingSource1 As BindingSource
+    Friend WithEvents BTNExit As Button
 End Class
