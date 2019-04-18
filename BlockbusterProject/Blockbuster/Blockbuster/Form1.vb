@@ -2,6 +2,7 @@
     Public Tax As Double
     Public Total As Double
     Public RentalFee As Double
+    Public selectedCustomerID As Integer
 
 
     Private Sub InvoiceBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
@@ -11,16 +12,21 @@
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'BlockbustersDataSet.Rentals' table. You can move, or remove it, as needed.
-        Me.RentalsTableAdapter.Fill(Me.BlockbustersDataSet.Rentals)
-        'TODO: This line of code loads data into the 'BlockbustersDataSet.Movies' table. You can move, or remove it, as needed.
-        Me.MoviesTableAdapter.Fill(Me.BlockbustersDataSet.Movies)
-        'TODO: This line of code loads data into the 'BlockbustersDataSet.Movie_Inventory' table. You can move, or remove it, as needed.
-        Me.Movie_InventoryTableAdapter.Fill(Me.BlockbustersDataSet.Movie_Inventory)
-        'TODO: This line of code loads data into the 'BlockbustersDataSet.Memberships' table. You can move, or remove it, as needed.
-        Me.MembershipsTableAdapter.Fill(Me.BlockbustersDataSet.Memberships)
-        'TODO: This line of code loads data into the 'BlockbustersDataSet.Invoice' table. You can move, or remove it, as needed.
-        Me.InvoiceTableAdapter.Fill(Me.BlockbustersDataSet.Invoice)
+
+        Try
+            'TODO: This line of code loads data into the 'BlockbustersDataSet.Rentals' table. You can move, or remove it, as needed.
+            Me.RentalsTableAdapter.Fill(Me.BlockbustersDataSet.Rentals)
+            'TODO: This line of code loads data into the 'BlockbustersDataSet.Movies' table. You can move, or remove it, as needed.
+            Me.MoviesTableAdapter.Fill(Me.BlockbustersDataSet.Movies)
+            'TODO: This line of code loads data into the 'BlockbustersDataSet.Movie_Inventory' table. You can move, or remove it, as needed.
+            Me.Movie_InventoryTableAdapter.Fill(Me.BlockbustersDataSet.Movie_Inventory)
+            'TODO: This line of code loads data into the 'BlockbustersDataSet.Memberships' table. You can move, or remove it, as needed.
+            Me.MembershipsTableAdapter.Fill(Me.BlockbustersDataSet.Memberships)
+            'TODO: This line of code loads data into the 'BlockbustersDataSet.Invoice' table. You can move, or remove it, as needed.
+            Me.InvoiceTableAdapter.Fill(Me.BlockbustersDataSet.Invoice)
+        Catch ex As System.Exception
+
+        End Try
 
 
 
@@ -35,5 +41,9 @@
 
     Private Sub BTNExit_Click(sender As Object, e As EventArgs) Handles BTNExit.Click
         Me.Close()
+    End Sub
+
+    Private Sub btnSearchCustomer_Click(sender As Object, e As EventArgs) Handles btnSearchCustomer.Click
+        searchCustomers.Show()
     End Sub
 End Class

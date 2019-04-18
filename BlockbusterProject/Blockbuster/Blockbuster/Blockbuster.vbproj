@@ -103,6 +103,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Rental.vb" />
+    <Compile Include="searchCustomers.Designer.vb">
+      <DependentUpon>searchCustomers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="searchCustomers.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Update Movie Inventory.Designer.vb">
       <DependentUpon>Update Movie Inventory.vb</DependentUpon>
     </Compile>
@@ -119,6 +125,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchCustomers.resx">
+      <DependentUpon>searchCustomers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Update Movie Inventory.resx">
       <DependentUpon>Update Movie Inventory.vb</DependentUpon>
