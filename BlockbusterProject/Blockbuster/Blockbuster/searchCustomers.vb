@@ -25,6 +25,7 @@
 
     Private Sub btnSelectCustomer_Click(sender As Object, e As EventArgs) Handles btnSelectCustomer.Click
         Dim row As DataGridViewRow = DataGridView1.Rows(0)
-        Form1.selectedCustomerID = Convert.ToInt32(row.Cells(2).Value.ToString)
+        Form1.selectedCustomerID = Convert.ToInt32(row.Cells(0).Value.ToString)
+        Form1.selectedCustomerLastName = row.Cells(2).Value.ToString
     End Sub
 End Class

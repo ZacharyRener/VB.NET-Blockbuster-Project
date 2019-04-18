@@ -112,7 +112,7 @@ Partial Class Form1
         Me.CBDuration.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CBDuration.FormattingEnabled = True
         Me.CBDuration.Location = New System.Drawing.Point(434, 169)
-        Me.CBDuration.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.CBDuration.Margin = New System.Windows.Forms.Padding(6)
         Me.CBDuration.Name = "CBDuration"
         Me.CBDuration.Size = New System.Drawing.Size(208, 33)
         Me.CBDuration.TabIndex = 67
@@ -120,7 +120,7 @@ Partial Class Form1
         'dtpCalender
         '
         Me.dtpCalender.Location = New System.Drawing.Point(750, 170)
-        Me.dtpCalender.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.dtpCalender.Margin = New System.Windows.Forms.Padding(6)
         Me.dtpCalender.Name = "dtpCalender"
         Me.dtpCalender.Size = New System.Drawing.Size(386, 31)
         Me.dtpCalender.TabIndex = 66
@@ -271,7 +271,7 @@ Partial Class Form1
         'BtnCalculate
         '
         Me.BtnCalculate.Location = New System.Drawing.Point(364, 603)
-        Me.BtnCalculate.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.BtnCalculate.Margin = New System.Windows.Forms.Padding(6)
         Me.BtnCalculate.Name = "BtnCalculate"
         Me.BtnCalculate.Size = New System.Drawing.Size(132, 41)
         Me.BtnCalculate.TabIndex = 98
@@ -281,7 +281,7 @@ Partial Class Form1
         'btnSearchCustomer
         '
         Me.btnSearchCustomer.Location = New System.Drawing.Point(795, 605)
-        Me.btnSearchCustomer.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.btnSearchCustomer.Margin = New System.Windows.Forms.Padding(6)
         Me.btnSearchCustomer.Name = "btnSearchCustomer"
         Me.btnSearchCustomer.Size = New System.Drawing.Size(158, 41)
         Me.btnSearchCustomer.TabIndex = 103
@@ -301,7 +301,7 @@ Partial Class Form1
         'BtnNewCust
         '
         Me.BtnNewCust.Location = New System.Drawing.Point(966, 605)
-        Me.BtnNewCust.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.BtnNewCust.Margin = New System.Windows.Forms.Padding(6)
         Me.BtnNewCust.Name = "BtnNewCust"
         Me.BtnNewCust.Size = New System.Drawing.Size(158, 41)
         Me.BtnNewCust.TabIndex = 101

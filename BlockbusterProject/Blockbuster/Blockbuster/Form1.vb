@@ -3,6 +3,7 @@
     Public Total As Double
     Public RentalFee As Double
     Public selectedCustomerID As Integer
+    Public selectedCustomerLastName As String
 
 
     Private Sub InvoiceBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
@@ -45,5 +46,9 @@
 
     Private Sub btnSearchCustomer_Click(sender As Object, e As EventArgs) Handles btnSearchCustomer.Click
         searchCustomers.Show()
+    End Sub
+
+    Private Sub BtnNewCust_Click(sender As Object, e As EventArgs) Handles BtnNewCust.Click
+        AddNewCustomer.Show()
     End Sub
 End Class
