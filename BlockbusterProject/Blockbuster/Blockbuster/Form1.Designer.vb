@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,58 +20,61 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.chkList_Movies = New System.Windows.Forms.ListBox()
+        Dim Movie_TypeLabel As System.Windows.Forms.Label
         Me.lblDate = New System.Windows.Forms.Label()
         Me.lblDuration = New System.Windows.Forms.Label()
         Me.CBDuration = New System.Windows.Forms.ComboBox()
         Me.dtpCalender = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.BlockbustersDataSet = New Blockbuster.BlockbustersDataSet()
-        Me.InvoiceBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.InvoiceTableAdapter = New Blockbuster.BlockbustersDataSetTableAdapters.InvoiceTableAdapter()
-        Me.TableAdapterManager = New Blockbuster.BlockbustersDataSetTableAdapters.TableAdapterManager()
-        Me.MembershipsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MembershipsTableAdapter = New Blockbuster.BlockbustersDataSetTableAdapters.MembershipsTableAdapter()
-        Me.Movie_InventoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Movie_InventoryTableAdapter = New Blockbuster.BlockbustersDataSetTableAdapters.Movie_InventoryTableAdapter()
-        Me.MoviesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MoviesTableAdapter = New Blockbuster.BlockbustersDataSetTableAdapters.MoviesTableAdapter()
-        Me.RentalsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RentalsTableAdapter = New Blockbuster.BlockbustersDataSetTableAdapters.RentalsTableAdapter()
         Me.lblTotalDue1 = New System.Windows.Forms.Label()
         Me.lblTax1 = New System.Windows.Forms.Label()
         Me.lblTotalRentalFee1 = New System.Windows.Forms.Label()
         Me.lblSubTotalDue = New System.Windows.Forms.Label()
         Me.lblTax = New System.Windows.Forms.Label()
         Me.lblTotalRentalFee = New System.Windows.Forms.Label()
-        Me.lblDueBack1 = New System.Windows.Forms.Label()
-        Me.lblDueBack = New System.Windows.Forms.Label()
         Me.BtnExit = New System.Windows.Forms.Button()
         Me.BtnCalculate = New System.Windows.Forms.Button()
-        Me.CBDamageIns = New System.Windows.Forms.CheckBox()
         Me.btnSearchCustomer = New System.Windows.Forms.Button()
         Me.btnCompleteRental = New System.Windows.Forms.Button()
         Me.BtnNewCust = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Movie_IDTextBox = New System.Windows.Forms.TextBox()
+        Me.MoviesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BlockbustersDataSet = New Blockbuster.BlockbustersDataSet()
+        Me.Movie_TypeTextBox = New System.Windows.Forms.TextBox()
+        Me.lblDueDate1 = New System.Windows.Forms.Label()
+        Me.lblDueDate = New System.Windows.Forms.Label()
+        Me.chkList_Movies = New System.Windows.Forms.CheckedListBox()
+        Me.InvoiceBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.InvoiceTableAdapter = New Blockbuster.BlockbustersDataSetTableAdapters.InvoiceTableAdapter()
+        Me.TableAdapterManager = New Blockbuster.BlockbustersDataSetTableAdapters.TableAdapterManager()
+        Me.MembershipsTableAdapter = New Blockbuster.BlockbustersDataSetTableAdapters.MembershipsTableAdapter()
+        Me.Movie_InventoryTableAdapter = New Blockbuster.BlockbustersDataSetTableAdapters.Movie_InventoryTableAdapter()
+        Me.MoviesTableAdapter = New Blockbuster.BlockbustersDataSetTableAdapters.MoviesTableAdapter()
+        Me.MembershipsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Movie_InventoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RentalsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Movie_TypeLabel = New System.Windows.Forms.Label()
+        CType(Me.MoviesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BlockbustersDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InvoiceBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembershipsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Movie_InventoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MoviesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RentalsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'chkList_Movies
+        'Movie_TypeLabel
         '
-        Me.chkList_Movies.FormattingEnabled = True
-        Me.chkList_Movies.ItemHeight = 16
-        Me.chkList_Movies.Location = New System.Drawing.Point(27, 109)
-        Me.chkList_Movies.Name = "chkList_Movies"
-        Me.chkList_Movies.Size = New System.Drawing.Size(203, 180)
-        Me.chkList_Movies.TabIndex = 0
+        Movie_TypeLabel.AutoSize = True
+        Movie_TypeLabel.Location = New System.Drawing.Point(858, 202)
+        Movie_TypeLabel.Name = "Movie_TypeLabel"
+        Movie_TypeLabel.Size = New System.Drawing.Size(85, 17)
+        Movie_TypeLabel.TabIndex = 105
+        Movie_TypeLabel.Text = "Movie Type:"
         '
         'lblDate
         '
@@ -128,69 +131,9 @@ Partial Class Form1
         Me.Label2.Location = New System.Drawing.Point(211, 9)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(394, 44)
+        Me.Label2.Size = New System.Drawing.Size(382, 43)
         Me.Label2.TabIndex = 87
         Me.Label2.Text = "Blockbuster Movies"
-        '
-        'BlockbustersDataSet
-        '
-        Me.BlockbustersDataSet.DataSetName = "BlockbustersDataSet"
-        Me.BlockbustersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'InvoiceBindingSource
-        '
-        Me.InvoiceBindingSource.DataMember = "Invoice"
-        Me.InvoiceBindingSource.DataSource = Me.BlockbustersDataSet
-        '
-        'InvoiceTableAdapter
-        '
-        Me.InvoiceTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.InvoiceTableAdapter = Me.InvoiceTableAdapter
-        Me.TableAdapterManager.MembershipsTableAdapter = Me.MembershipsTableAdapter
-        Me.TableAdapterManager.Movie_InventoryTableAdapter = Me.Movie_InventoryTableAdapter
-        Me.TableAdapterManager.MoviesTableAdapter = Me.MoviesTableAdapter
-        Me.TableAdapterManager.RentalsTableAdapter = Me.RentalsTableAdapter
-        Me.TableAdapterManager.UpdateOrder = Blockbuster.BlockbustersDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'MembershipsBindingSource
-        '
-        Me.MembershipsBindingSource.DataMember = "Memberships"
-        Me.MembershipsBindingSource.DataSource = Me.BlockbustersDataSet
-        '
-        'MembershipsTableAdapter
-        '
-        Me.MembershipsTableAdapter.ClearBeforeFill = True
-        '
-        'Movie_InventoryBindingSource
-        '
-        Me.Movie_InventoryBindingSource.DataMember = "Movie Inventory"
-        Me.Movie_InventoryBindingSource.DataSource = Me.BlockbustersDataSet
-        '
-        'Movie_InventoryTableAdapter
-        '
-        Me.Movie_InventoryTableAdapter.ClearBeforeFill = True
-        '
-        'MoviesBindingSource
-        '
-        Me.MoviesBindingSource.DataMember = "Movies"
-        Me.MoviesBindingSource.DataSource = Me.BlockbustersDataSet
-        '
-        'MoviesTableAdapter
-        '
-        Me.MoviesTableAdapter.ClearBeforeFill = True
-        '
-        'RentalsBindingSource
-        '
-        Me.RentalsBindingSource.DataMember = "Rentals"
-        Me.RentalsBindingSource.DataSource = Me.BlockbustersDataSet
-        '
-        'RentalsTableAdapter
-        '
-        Me.RentalsTableAdapter.ClearBeforeFill = True
         '
         'lblTotalDue1
         '
@@ -246,24 +189,6 @@ Partial Class Form1
         Me.lblTotalRentalFee.TabIndex = 88
         Me.lblTotalRentalFee.Text = "Total Rental Fee:"
         '
-        'lblDueBack1
-        '
-        Me.lblDueBack1.Location = New System.Drawing.Point(622, 299)
-        Me.lblDueBack1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblDueBack1.Name = "lblDueBack1"
-        Me.lblDueBack1.Size = New System.Drawing.Size(88, 15)
-        Me.lblDueBack1.TabIndex = 97
-        '
-        'lblDueBack
-        '
-        Me.lblDueBack.AutoSize = True
-        Me.lblDueBack.Location = New System.Drawing.Point(510, 297)
-        Me.lblDueBack.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblDueBack.Name = "lblDueBack"
-        Me.lblDueBack.Size = New System.Drawing.Size(73, 17)
-        Me.lblDueBack.TabIndex = 96
-        Me.lblDueBack.Text = "Due Back:"
-        '
         'BtnExit
         '
         Me.BtnExit.Location = New System.Drawing.Point(377, 386)
@@ -283,17 +208,6 @@ Partial Class Form1
         Me.BtnCalculate.TabIndex = 98
         Me.BtnCalculate.Text = "Calculate"
         Me.BtnCalculate.UseVisualStyleBackColor = True
-        '
-        'CBDamageIns
-        '
-        Me.CBDamageIns.AutoSize = True
-        Me.CBDamageIns.Location = New System.Drawing.Point(292, 241)
-        Me.CBDamageIns.Margin = New System.Windows.Forms.Padding(4)
-        Me.CBDamageIns.Name = "CBDamageIns"
-        Me.CBDamageIns.Size = New System.Drawing.Size(109, 21)
-        Me.CBDamageIns.TabIndex = 100
-        Me.CBDamageIns.Text = "Damage Ins."
-        Me.CBDamageIns.UseVisualStyleBackColor = True
         '
         'btnSearchCustomer
         '
@@ -324,19 +238,133 @@ Partial Class Form1
         Me.BtnNewCust.Text = "New Customer"
         Me.BtnNewCust.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(39, 386)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 104
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Movie_IDTextBox
+        '
+        Me.Movie_IDTextBox.BackColor = System.Drawing.SystemColors.Control
+        Me.Movie_IDTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Movie_IDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MoviesBindingSource, "Movie ID", True))
+        Me.Movie_IDTextBox.Location = New System.Drawing.Point(835, 138)
+        Me.Movie_IDTextBox.Name = "Movie_IDTextBox"
+        Me.Movie_IDTextBox.Size = New System.Drawing.Size(100, 15)
+        Me.Movie_IDTextBox.TabIndex = 105
+        '
+        'MoviesBindingSource
+        '
+        Me.MoviesBindingSource.DataMember = "Movies"
+        Me.MoviesBindingSource.DataSource = Me.BlockbustersDataSet
+        '
+        'BlockbustersDataSet
+        '
+        Me.BlockbustersDataSet.DataSetName = "BlockbustersDataSet"
+        Me.BlockbustersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Movie_TypeTextBox
+        '
+        Me.Movie_TypeTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MoviesBindingSource, "Movie Type", True))
+        Me.Movie_TypeTextBox.Location = New System.Drawing.Point(949, 199)
+        Me.Movie_TypeTextBox.Name = "Movie_TypeTextBox"
+        Me.Movie_TypeTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.Movie_TypeTextBox.TabIndex = 106
+        '
+        'lblDueDate1
+        '
+        Me.lblDueDate1.Location = New System.Drawing.Point(622, 295)
+        Me.lblDueDate1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDueDate1.Name = "lblDueDate1"
+        Me.lblDueDate1.Size = New System.Drawing.Size(88, 15)
+        Me.lblDueDate1.TabIndex = 108
+        '
+        'lblDueDate
+        '
+        Me.lblDueDate.AutoSize = True
+        Me.lblDueDate.Location = New System.Drawing.Point(510, 295)
+        Me.lblDueDate.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDueDate.Name = "lblDueDate"
+        Me.lblDueDate.Size = New System.Drawing.Size(72, 17)
+        Me.lblDueDate.TabIndex = 107
+        Me.lblDueDate.Text = "Due Date:"
+        '
+        'chkList_Movies
+        '
+        Me.chkList_Movies.FormattingEnabled = True
+        Me.chkList_Movies.Location = New System.Drawing.Point(27, 108)
+        Me.chkList_Movies.Name = "chkList_Movies"
+        Me.chkList_Movies.Size = New System.Drawing.Size(255, 191)
+        Me.chkList_Movies.TabIndex = 109
+        '
+        'InvoiceBindingSource
+        '
+        Me.InvoiceBindingSource.DataMember = "Invoice"
+        Me.InvoiceBindingSource.DataSource = Me.BlockbustersDataSet
+        '
+        'InvoiceTableAdapter
+        '
+        Me.InvoiceTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.InvoiceTableAdapter = Me.InvoiceTableAdapter
+        Me.TableAdapterManager.MembershipsTableAdapter = Me.MembershipsTableAdapter
+        Me.TableAdapterManager.Movie_InventoryTableAdapter = Me.Movie_InventoryTableAdapter
+        Me.TableAdapterManager.MoviesTableAdapter = Me.MoviesTableAdapter
+        Me.TableAdapterManager.OverDue_MembersTableAdapter = Nothing
+        Me.TableAdapterManager.RentalsTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Blockbuster.BlockbustersDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'MembershipsTableAdapter
+        '
+        Me.MembershipsTableAdapter.ClearBeforeFill = True
+        '
+        'Movie_InventoryTableAdapter
+        '
+        Me.Movie_InventoryTableAdapter.ClearBeforeFill = True
+        '
+        'MoviesTableAdapter
+        '
+        Me.MoviesTableAdapter.ClearBeforeFill = True
+        '
+        'MembershipsBindingSource
+        '
+        Me.MembershipsBindingSource.DataMember = "Memberships"
+        Me.MembershipsBindingSource.DataSource = Me.BlockbustersDataSet
+        '
+        'Movie_InventoryBindingSource
+        '
+        Me.Movie_InventoryBindingSource.DataMember = "Movie Inventory"
+        Me.Movie_InventoryBindingSource.DataSource = Me.BlockbustersDataSet
+        '
+        'RentalsBindingSource
+        '
+        Me.RentalsBindingSource.DataMember = "Rentals"
+        Me.RentalsBindingSource.DataSource = Me.BlockbustersDataSet
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 560)
+        Me.ClientSize = New System.Drawing.Size(787, 438)
+        Me.Controls.Add(Me.chkList_Movies)
+        Me.Controls.Add(Me.lblDueDate1)
+        Me.Controls.Add(Me.lblDueDate)
+        Me.Controls.Add(Movie_TypeLabel)
+        Me.Controls.Add(Me.Movie_TypeTextBox)
+        Me.Controls.Add(Me.Movie_IDTextBox)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnSearchCustomer)
         Me.Controls.Add(Me.btnCompleteRental)
         Me.Controls.Add(Me.BtnNewCust)
-        Me.Controls.Add(Me.CBDamageIns)
         Me.Controls.Add(Me.BtnExit)
         Me.Controls.Add(Me.BtnCalculate)
-        Me.Controls.Add(Me.lblDueBack1)
-        Me.Controls.Add(Me.lblDueBack)
         Me.Controls.Add(Me.lblTotalDue1)
         Me.Controls.Add(Me.lblTax1)
         Me.Controls.Add(Me.lblTotalRentalFee1)
@@ -349,21 +377,18 @@ Partial Class Form1
         Me.Controls.Add(Me.lblDuration)
         Me.Controls.Add(Me.CBDuration)
         Me.Controls.Add(Me.dtpCalender)
-        Me.Controls.Add(Me.chkList_Movies)
         Me.Name = "Form1"
         Me.Text = "Form1"
+        CType(Me.MoviesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BlockbustersDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InvoiceBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembershipsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Movie_InventoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MoviesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RentalsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents chkList_Movies As ListBox
     Friend WithEvents lblDate As Label
     Friend WithEvents lblDuration As Label
     Friend WithEvents CBDuration As ComboBox
@@ -380,7 +405,6 @@ Partial Class Form1
     Friend WithEvents Movie_InventoryBindingSource As BindingSource
     Friend WithEvents MoviesTableAdapter As BlockbustersDataSetTableAdapters.MoviesTableAdapter
     Friend WithEvents MoviesBindingSource As BindingSource
-    Friend WithEvents RentalsTableAdapter As BlockbustersDataSetTableAdapters.RentalsTableAdapter
     Friend WithEvents RentalsBindingSource As BindingSource
     Friend WithEvents lblTotalDue1 As Label
     Friend WithEvents lblTax1 As Label
@@ -388,12 +412,15 @@ Partial Class Form1
     Friend WithEvents lblSubTotalDue As Label
     Friend WithEvents lblTax As Label
     Friend WithEvents lblTotalRentalFee As Label
-    Friend WithEvents lblDueBack1 As Label
-    Friend WithEvents lblDueBack As Label
     Friend WithEvents BtnExit As Button
     Friend WithEvents BtnCalculate As Button
-    Friend WithEvents CBDamageIns As CheckBox
     Friend WithEvents btnSearchCustomer As Button
     Friend WithEvents btnCompleteRental As Button
     Friend WithEvents BtnNewCust As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Movie_IDTextBox As TextBox
+    Friend WithEvents Movie_TypeTextBox As TextBox
+    Friend WithEvents lblDueDate1 As Label
+    Friend WithEvents lblDueDate As Label
+    Friend WithEvents chkList_Movies As CheckedListBox
 End Class
